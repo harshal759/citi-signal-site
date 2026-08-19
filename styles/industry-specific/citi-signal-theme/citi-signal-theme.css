@@ -823,7 +823,7 @@ body.citi-signal-theme header nav .nav-tools .sign-in-btn::after {
 
   /* keep the logo's own aspect ratio instead of being width-clamped by the grown flex box */
   body.citi-signal-theme header nav .nav-brand img {
-    height: 28px;
+    height: 18px;
     max-width: none;
     width: auto;
   }
@@ -873,6 +873,8 @@ body.citi-signal-theme header nav .nav-tools .sign-in-btn::after {
     padding: 0;
   }
 
+  
+  body.citi-signal-theme .section.columns-container.section-horizontal-widths,
   body.citi-signal-theme .section.contact-us.section-horizontal-widths,
   body.citi-signal-theme .section.product-detail-container,
   body.citi-signal-theme .section.create-account-container,
@@ -880,6 +882,8 @@ body.citi-signal-theme header nav .nav-tools .sign-in-btn::after {
     flex-direction: column !important;
   }
 
+  body.citi-signal-theme .section.ContentCardContainer .Banner .Banner__content,
+  body.citi-signal-theme .section.columns-container.section-horizontal-widths > div,
   body.citi-signal-theme .section.contact-us.section-horizontal-widths > div,
   body.citi-signal-theme .section.product-detail-container > div,
   body.citi-signal-theme .section.create-account-container > div,
@@ -908,5 +912,43 @@ body.citi-signal-theme header nav .nav-tools .sign-in-btn::after {
 
   body.citi-signal-theme .section.find-your-store.columns-container.action-button-container {
     padding-inline: 16px;
+  }
+
+  body.citi-signal-theme .header-wrapper, body.citi-signal-theme header nav, body.citi-signal-theme header .nav-wrapper {
+    height: auto;
+  }
+
+  body.citi-signal-theme .section.ContentCardContainer .Banner .Image, body.citi-signal-theme .section.ContentCardContainer .Banner .Image img,
+  body.citi-signal-theme .section.ContentCardContainer, body.citi-signal-theme .section.ContentCardContainer > div, body.citi-signal-theme .section.ContentCardContainer .Banner {
+    height: 400px !important;
+  }
+
+  body.citi-signal-theme .section.ContentCardContainer .Banner .Banner__content {
+    padding: 16px 32px;
+  }
+
+  body.citi-signal-theme .hero.image-background-text-left div:nth-child(2) {
+    margin-left: 0;
+  }
+
+  body.citi-signal-theme .bg-default.section.columns-container .columns-3-cols .columns-row {
+    gap: 24px;
+  }
+
+  body.citi-signal-theme main > .section {
+    margin: 24px 0;
+  }
+
+  body.citi-signal-theme header nav .nav-tools .user-profile-btn .user-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  body.citi-signal-theme header nav .nav-tools .user-profile-btn {
+    display: flex;
+  }
+
+  body.citi-signal-theme header nav .nav-tools .user-profile-btn .user-name {
+    display: none;
   }
 }
