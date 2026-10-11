@@ -249,19 +249,29 @@ function renderCarousel(block, items, cfg, isAuthor, redirectUrl = "") {
   track.className = "cpl-carousel-track";
 
   items.forEach((item, i) => {
-    const { damImageURL, image: itemImage } = item || {};
+    const { damImageURL, image: itemImage, externalImageURL } = item || {};
     const imgData = damImageURL || itemImage || {};
     const slide = document.createElement("div");
     slide.className = "cpl-carousel-slide";
     if (i === 0) slide.classList.add("active");
 
+    let picture = null;
     if (imgData && (imgData._publishUrl || imgData._authorUrl || imgData._dynamicUrl)) {
-      const picture = createLumaProductImagePicture(imgData, item.name || "Product image", {
+      picture = createLumaProductImagePicture(imgData, item.name || "Product image", {
         isAuthor,
         eager: i === 0,
       });
-      slide.append(picture);
     }
+    if (!picture && externalImageURL) {
+      picture = document.createElement("picture");
+      const img = document.createElement("img");
+      img.src = externalImageURL;
+      img.alt = item.name || "Product image";
+      img.loading = i === 0 ? "eager" : "lazy";
+      if (i === 0) img.setAttribute("fetchpriority", "high");
+      picture.append(img);
+    }
+    if (picture) slide.append(picture);
     track.append(slide);
   });
 
