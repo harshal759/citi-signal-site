@@ -46,15 +46,23 @@
       "credit-card-application-form",
       "loan-application-form",
       "get-offer",
+      "inbox",
+      "map",
+      "web-view",
+      "content-card",
+      "decisioning-container",
       "new-account",
       "loan-calculator",
       "insurance",
       "add-external",
+      "additional-service",
+      "automatic-payments",
       "confirmation",
       "feedback",
       "coffee-quiz-frescopa",
       "join-us",
       "test-drive",
+      "schedule-appointment",
       "cart",
       "category-products-lister",
       "new-arrival",
@@ -68,7 +76,9 @@
       "rss-details",
       "insurance-plan-selection",
       "medicare-plan-selection",
-      "plan-application"
+      "plan-application",
+      "healthcare-upload-photo",
+      "healthcare-schedule-check"
     ]
   },
   {
@@ -156,6 +166,14 @@
   },
   {
     "id": "plan-application",
+    "components": []
+  },
+  {
+    "id": "healthcare-upload-photo",
+    "components": []
+  },
+  {
+    "id": "healthcare-schedule-check",
     "components": []
   }
 ]

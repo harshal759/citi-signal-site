@@ -17,7 +17,6 @@ import {
   toClassName,
   toCamelCase,
   decorateDefaultBlock,
-  hideSidekick
 } from './aem.js';
 import { picture, source, img } from './dom-helpers.js';
 
@@ -104,7 +103,7 @@ export function normalizeAemPath(path) {
     const withHtml = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
     return `${withHtml}${suffix}`;
   }
-  const stripped = pathname.replace(/^\/content\/[^/]+\/language-masters/, '').replace(/\.html$/, '');
+  const stripped = pathname.replace(new RegExp(`^/content/.+?${PATH_PREFIX}`), '').replace(/\.html$/, '');
   return `${stripped}${suffix}`;
 }
 
