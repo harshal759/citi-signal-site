@@ -2331,7 +2331,7 @@
       },
       {
         "component": "text",
-        "name": "submit-label",
+        "name": "button-label",
         "label": "Submit Label",
         "value": "",
         "valueType": "string",
@@ -2420,7 +2420,7 @@
       },
       {
         "component": "text",
-        "name": "submit-label",
+        "name": "button-label",
         "label": "Submit Label",
         "value": "",
         "valueType": "string",
@@ -2509,7 +2509,7 @@
       },
       {
         "component": "text",
-        "name": "submit-label",
+        "name": "button-label",
         "label": "Submit Label",
         "value": "",
         "valueType": "string",
